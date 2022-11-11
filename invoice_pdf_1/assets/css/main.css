@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+img{
+    max-width: 100%;
+}
+
+.invoice_pdf_container{
+    max-width: 595px;
+    height: 842px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 459px;
+    margin: 0 auto;
+}
+
+.invoice_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0; 
+}
+
+.invo_top_left{
+    max-width: 64%;
+    width: 100%;
+}
+
+.invo_top_right{
+    max-width: 36%;
+    width: 100%;
+}
+
+.invo_type{
+    font-size: 20px;
+}
+
+.invoice_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0 28px;
+}
+
+.invoice_title img{
+    object-fit: contain;
+}
+
+.invoice_title h2{
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 0;
+}
+
+.invoice_details{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 1px solid #8B8B8B;
+    padding-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.7rem;
+    font-weight: 400;
+}
+
+
+.invoice_details .detail_left{
+    display: flex;
+}
+
+.colon{
+    padding: 0 10px;
+}
+
+
+
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background: #F9F9F9;
+    margin-top: 39px;
+  }
+
+  th{
+      font-size: 12px;
+      background: #D9D9D9;
+      font-weight: 400;
+  }
+
+  td{
+      font-size: 10px;
+      line-height: 12.1px;
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 9px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #F1F1F1;
+  }
+
+  .invoice_smmery{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .invoice_smmery table{
+    width: 40%;
+  }
+
+  .invoice_smmery table th{
+    text-align: center;
+  }
+
+  .invo_comments{
+    padding: 30px 0;
+    text-align: center;
+  }
