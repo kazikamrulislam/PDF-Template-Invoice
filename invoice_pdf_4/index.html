@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        .invoice_pdf_container {
+            max-width: 595px;
+            height: 842px;
+            background-color: #fff;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 459px;
+            margin: 0 auto;
+        }
+
+        .invoice_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .invo_top_left {
+            max-width: 64%;
+            width: 100%;
+        }
+
+        .invo_top_right {
+            max-width: 36%;
+            width: 100%;
+        }
+
+        .invo_type {
+            font-size: 16px;
+        }
+
+        .invoice_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 0 28px;
+        }
+
+        .invoice_title img {
+            object-fit: contain;
+        }
+
+        .invoice_title h2 {
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 0;
+        }
+
+        .invoice_details {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            border-bottom: 1px solid #8B8B8B;
+            padding-bottom: 5px;
+            font-size: 14px;
+            line-height: 1.7rem;
+            font-weight: 400;
+        }
+
+
+        .invoice_details .detail_left {
+            display: flex;
+
+        }
+
+        .colon {
+            padding: 0 10px;
+        }
+
+        /* Table style start here */
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background: #FFFFFF;
+            margin-top: 39px;
+        }
+
+        th {
+            font-size: 12px;
+            border-bottom: 1px solid #d0d0d0;
+            font-weight: 400;
+        }
+
+        td {
+            font-size: 10px;
+            line-height: 12.1px;
+        }
+
+        td,
+        th {
+            text-align: left;
+            padding: 9px;
+        }
+
+        tr:nth-last-child(1){
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .invoice_smmery {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .invoice_smmery table {
+            width: 40%;
+        }
+
+        .invoice_smmery table th {
+            text-align: center;
+        }
+
+        .invo_comments {
+            font-size: 10px;
+            padding: 50px 0 0;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="invoice_pdf_container">
+            <div class="container">
+                <div class="invoice_top">
+                    <div class="invo_top_left">
+                        
+                    </div>
+                    <div class="invo_top_right">
+                        <div class="invo_type">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="invoice_details">
+                    <div class="detail_left">
+                        <div class="title_data">
+                            <div class="">Invoice for <span>£1500.00</span></div>
+                            <div class="">Due by <span>29 October 2022</span></div>
+                            <div class="">Billed to:</div>
+                            <div class="">Monsterclaw LLC</div>
+                            <div class="">4945  Forest Avenue New York 10004 United States</div>
+                        </div>
+                    </div>
+                    <div class="detail_right">
+                        <div class="title_data">
+                            <div class="">To</div>
+                            <div class="">Client</div>
+                            <div class="">client@monsterclaw.com</div>
+                            <div class="">01701457585</div>
+                            <div class="">monsterclaw.com</div>
+                            <div class="">Dhaka</div>
+                            <div class="p_name"><span>Invoice number:</span>123456A</div>
+                            <div class="domain"><span>Issuing date:</span>01 March 2022</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="invoice_details">
+                    <div class="detail_left">
+                        <div class="title">
+                            <div class="p_name">Invoice No</div>
+                            <div class="domain">Invoice Date</div>
+                        </div>
+                        <div class="colon">
+                            <div>:</div>
+                            <div>:</div>
+                        </div>
+                        <div class="title_data">
+                            <div class="p_name_data"># 001</div>
+                            <div class="domain_data">12/02/22</div>
+                        </div>
+                    </div>
+                    <div class="detail_left">
+                        <div class="title">
+                            <div class="p_name">Due Date
+                            </div>
+                        </div>
+                        <div class="colon">
+                            <div>:</div>
+                        </div>
+                        <div class="title_data">
+                            <div class="p_name_data">12/02/23</div>
+                        </div>
+                    </div>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>Tax</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>#001</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>10%</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>5%</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>#003</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>5%</td>
+                        <td>400</td>
+                    </tr>
+                </table>
+
+                <div class="invoice_smmery">
+                    <table>
+                        <tr>
+                            <th colspan="2">Invoice Summery</th>
+                        </tr>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>1200</td>
+                        </tr>
+                        <tr>
+                            <td>Tax</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Total <span>(USD)</span></td>
+                            <td>1280</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="invo_comments">
+                    <h3>Terms & Conditions</h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis assumenda aperiam dolor veniam inventore ab sed tempora excepturi expedita qui praesentium illo quis ipsa recusandae minima, similique deleniti deserunt itaque.
+                </div>
+
+            </div>
+        </div>
+</body>
+</html>
