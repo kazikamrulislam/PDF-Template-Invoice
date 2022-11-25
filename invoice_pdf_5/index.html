@@ -24,123 +24,60 @@
         }
         .invoice_pdf_container {
             max-width: 595px;
-            height: 759px;
+            height: 782px;
             background-color: #fff;
             margin: 0 auto;
-            border-bottom: 24px solid #614DFF63;
         }
 
         .container {
-            padding: 50px 55px;
+            padding: 50px 30px;
             margin: 0 auto;
         }
 
-        .invoice_top {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: center;
-            padding: 20px 0 0;
-        }
-
-        .invo_top_left {
-            max-width: 60%;
-            width: 100%;
-        }
-
-        .detail_left .bill_to{
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-        .invo_amount{
-            font-size: 20px;
-            line-height: 1.5;
-            color: #4F4D4D;
-        }
-
-        .invo_amount span{
-            font-weight: 700;
-            color: #38427D;
-        }
-
-        .due_date{
-            font-size: 20px;
-            line-height: 1.5;
-            color: #4F4D4D;
-        }
-
-        .due_date span{
-            font-weight: 700;
-            color: #4F4D4D;
-        }
-
-        .invo_top_right {
-            max-width: 40%;
-            width: 100%;
-        }
-
-        .invo_type {
-            font-size: 16px;
-        }
-
-        .detail_right .pdf_from_adress, .detail_right .pdf_from_web_adress, .detail_right .pdf_from_mail, .detail_right .pdf_from_phone {
+        .invoice_top{
             display: flex;
             align-items: flex-start;
-            justify-content: flex-start;
-            font-size: 11px;
-            font-weight: 400;
-        }
-        .pdf_from_adress span, .pdf_from_web_adress span, .pdf_from_mail span, .pdf_from_phone span{
-            font-size: 12px;
-            line-height: 2.7;
-            letter-spacing: 5px;
-        }
-
-        .invoice_title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 32px 0 28px;
-        }
-
-        .invoice_title img {
-            object-fit: contain;
-        }
-
-        .invoice_title h2 {
-            font-size: 32px;
-            font-weight: 900;
-            line-height: 0;
-        }
-
-        .invoice_details {
-            display: flex;
             justify-content: space-between;
-            align-items: start;
-            padding-bottom: 5px;
+            margin-top: 50px;
+        }
+
+        .bill_to, .pdf_from, .bill_info{
+            width: 33%;
+            padding: 0 20px;
+            font-size: 12px;
+            line-height: 17px;
+            color: #222234;
+        }
+
+        .bill_to{
+            padding-left: 0;
+        }
+        .bill_info{
+            padding-right: 0;
+        }
+
+        .bill_to_title, .pdf_from_title, .pdf_info_title{
             font-size: 14px;
-            line-height: 1.7rem;
-            font-weight: 400;
-        }
-
-
-        .invoice_details .detail_left {
-            width: 40%;
-            font-size: 11px;
-        }
-
-        .invoice_details .detail_right{
-            width: 40%;
-        }
-
-        .pdf_to_invo_issu_date span, .pdf_to_invo_number span{
             font-weight: 700;
-            padding-right: 5px;
+            color: #6F6F84;
+            line-height: 15.6px;
+            padding-bottom: 7px;
         }
-        
-        .colon {
-            padding: 0 10px;
+
+        .pdf_to_name, .pdf_from_name, .total_amount{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+            padding-bottom: 5px;
+        }
+
+        .payment_section {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #614DFF7A;
+        }
+
+        .pdf_to_adress, .pdf_from_adress{
+            font-size: 12px;
         }
 
         /* Table style start here */
@@ -154,54 +91,122 @@
         }
 
         th {
-            font-size: 10px;
-            border-bottom: 1px solid #d0d0d0;
+            font-size: 12px;
             font-weight: 700;
         }
 
         td {
-            font-size: 10px;
-            line-height: 12.1px;
+            font-size: 12px;
+            line-height: 14.52px;
+            color: #222234;
         }
 
         td,
         th {
             text-align: left;
-            padding: 9px;
+            padding: 10px 0;
         }
 
         tr:nth-last-child(1){
-            border-bottom: 1px solid #d0d0d0;
+            border-bottom: 2px solid #d0d0d0;
+        }
+
+        .invoice_smmery {
+            display: flex;
+            justify-content: flex-end;
         }
 
         .invoice_smmery table{
+            margin-top: 0px;
+        }
+
+        .invoice_smmery tr:nth-last-child(1){
+            border-bottom: none;
+        }
+
+        .invoice_smmery tr:nth-last-child(2){
+            border-bottom: .75px solid #BCB0C4;
+        }
+
+        .invoice_smmery th,.invoice_smmery td{
+            padding: 9px 0;
+            color: #555555;
+        }
+
+        .invoice_smmery td{
+            font-size: 12px;
+            color: #6F6F84;
+        }
+
+        .payment_section {
             display: flex;
-            justify-content: flex-start;
-            background-color: #F9F9FB;
-            border-radius: 4px;
+            justify-content: end;
         }
 
-        .invoice_smmery table {
-            width: 50%;
-            padding: 5px;
+
+        .payment_details {
+            width: 65%;
+            padding-top: 50px;
         }
 
-        .invoice_smmery table th {
-            text-align: left;
-            font-size: 13px;
-            border-bottom: none;
+        .payment_details .note{
+            font-size: 12px;
+            font-weight: 500;
+            color: #6F6F84;
+            padding-bottom: 5px;
+
+        }
+
+        .details_title{
+            font-size: 12px;
             font-weight: 400;
+            line-height: 12px;
         }
 
-        .invoice_smmery table tr:nth-last-child(1){
-            border-bottom: none;
-        }
-
-        .invo_comments {
+        .payment_section .details{
             font-size: 10px;
-            padding: 50px 0 0;
-            text-align: left;
+            font-weight: 400;
+            line-height: 14px;
         }
+
+        .note_txt {
+            padding-bottom: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #222234;
+            
+        }
+
+        .payment_info{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 30px 10px 10px;
+            background: #F5F5FA;
+            margin-right: -30px;
+        }
+
+        .sender_details{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 20px 0 25px;
+        }
+
+        .sender_details .sender_web_adress, .sender_details .mail, .sender_details .phone{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: #6F6F84;
+        }
+
+        .sender_details .sender_web_adress span, .sender_details .mail span, .sender_details .phone span{
+            padding-right: 5px;
+            font-size: 18px;
+        }
+        
 
 
     </style>
@@ -209,19 +214,36 @@
     <body>
         <div class="invoice_pdf_container">
             <div class="container">
+                
                 <div class="invoice_top">
-                    <div class="invo_top_left">
-                        <div class="invo_amount">Invoice for <span>£1500.00</span></div>
-                        <div class="due_date">Due by <span>29 October 2022</span></div>
-                    </div>
-                    <div class="invo_top_right">
-                        <div class="invo_type">
-                            <img src="./assets/images/company_logo.svg" alt="">
+                    <div class="bill_to">
+                        <div class="title_data">
+                            <div class="bill_to_title">To:</div>
+                            <div class="pdf_to_name">Monsterclaw LLC</div>
+                            <div class="pdf_to_adress">Monsterclaw 79 Exning Road HARINGDON BA11 2LE</div>
+                            <!-- <div class="pdf_to_invo_number"><span>Invoice number :</span>123456A</div>
+                            <div class="pdf_to_invo_issu_date"><span>Issuing date :</span>01 March 2022</div> -->
                         </div>
+                    </div>
+                    <div class="pdf_from">
+                        <div class="title_data">
+                            <div class="pdf_from_title">From:</div>
+                            <div class="pdf_from_name">Monsterclaw LLC</div>
+                            <div class="pdf_from_adress">Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA</div>
+                            <!-- <div class="pdf_from_web_adress">monsterclaw.com</div>
+                            <div class="pdf_from_mail">client@monsterclaw.com</div>
+                            <div class="pdf_from_phone">+44 7123 456789</div> -->
+                        </div>
+                    </div>
+                    <div class="bill_info">
+                        <div class="pdf_info_title">Info:</div>
+                        <div class="total_amount">Amount: $1260.00</div>
+                        <div class="due_date">Invo No <span>-</span><span>057</span></div>
+                        <div class="due_date">Due by <span>29/11/2022</span></div>
                     </div>
                 </div>
 
-                <div class="invoice_details">
+                <!-- <div class="invoice_details">
                     <div class="detail_left">
                         <div class="title_data">
                             <div class="bill_to">Billed to:</div>
@@ -239,70 +261,95 @@
                             <div class="pdf_from_phone"><span class="material-symbols-outlined address_phone_icon">call</span> <div class="phone">+44 7123 456789</div></div>
                         </div>
                     </div>
-                </div>
+                    <div class="invo_top_left">
+                        <div class="invo_amount">Invoice for <span>£1500.00</span></div>
+                        <div class="due_date">Due by <span>29 October 2022</span></div>
+                    </div>
+                    <div class="invo_top_right">
+                        <div class="invo_type">
+                            <img src="./assets/images/company_logo.svg" alt="">
+                        </div>
+                    </div>
+                </div> -->
 
                 <table>
                     <tr>
-                        <th style="text-align:left; color:#A5A7A9;">DESCRIPTION</th>
-                        <th style="text-align:right; color:#A5A7A9; ">QUANTITY</th>
-                        <th style="text-align:right; color:#A5A7A9;">COST</th>
+                        <th style="text-align:left; color:#A5A7A9;">ITEM DESCRIPTION</th>
+                        <th style="text-align:right; color:#A5A7A9; ">QTY</th>
+                        <th style="text-align:right; color:#A5A7A9;">RATE</th>
                         <th style="text-align:right; color:#A5A7A9;">AMOUNT</th>
                     </tr>
                     <tr>
                         <td style="text-align:left;">Product Name</td>
-                        <td style="text-align:right;">2</td>
-                        <td style="text-align:right;">200</td>
-                        <td style="text-align:right;">400</td>
+                        <td style="text-align:right; font-weight:600;">2</td>
+                        <td style="text-align:right; font-weight:600;">200</td>
+                        <td style="text-align:right; font-weight:600;">400</td>
                     </tr>
                     <tr>
                         <td style="text-align:left;">Product Name</td>
-                        <td style="text-align:right;">2</td>
-                        <td style="text-align:right;">200</td>
-                        <td style="text-align:right;">400</td>
+                        <td style="text-align:right; font-weight:600;">2</td>
+                        <td style="text-align:right; font-weight:600;">200</td>
+                        <td style="text-align:right; font-weight:600;">400</td>
                     </tr>
                     <tr>
                         <td style="text-align:left;">Product Name</td>
-                        <td style="text-align:right;">2</td>
-                        <td style="text-align:right;">200</td>
-                        <td style="text-align:right;">400</td>
+                        <td style="text-align:right; font-weight:600;">2</td>
+                        <td style="text-align:right; font-weight:600;">200</td>
+                        <td style="text-align:right; font-weight:600;">400</td>
                     </tr>
                 </table>
-                <div class="total_amount" style="text-align:right; font-size:12px; font-weight: 700; color:#38427D; "><p>Total: 5678.00</p></div>
+                
 
                 <div class="invoice_smmery">
                     <table>
                         <tr>
-                            <th style="font-weight:700;" colspan="2">Payment details</th>
+                            <!-- <th colspan="2">Invoice Summery</th> -->
                         </tr>
                         <tr>
-                            <td style="font-weight:700;">Bank</td>
-                            <td style="text-align:left;">Brac Bank</td>
+                            <td style="text-align: left;">Sub Total</td>
+                            <td style="text-align: right; color:#222234; font-weight:600;">1200</td>
                         </tr>
                         <tr>
-                            <td style="font-weight:700;">Account name</td>
-                            <td style="text-align:left;">Amy Rogers</td>
+                            <td style="text-align: left;">GST(10%)</td>
+                            <td style="text-align: right; color:#222234; font-weight:600;">80</td>
                         </tr>
                         <tr>
-                            <td style="font-weight:700;">Account number</td>
-                            <td style="text-align:left;">12345678</td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight:700;">Sort code</td>
-                            <td style="text-align:left;">12-34-56</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:left; font-size:10px;" colspan="2">Please pay within 28 days from the issuing date.</td>
+                            <td style="text-align: left; color:#294997; font-size:12px;font-weight:600;">Total <span style="color:#00000040;">(USD)</span></td>
+                            <td style="text-align: right; color:#294997; font-size:20px;font-weight:800;"> <span>$</span> 1280.00</td>
                         </tr>
                     </table>
                 </div>
 
-                <!-- <div class="invo_comments">
-                    <h3>Terms & Conditions</h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis assumenda aperiam dolor veniam inventore ab sed
-                    tempora excepturi expedita qui praesentium illo quis ipsa
-                    recusandae minima, similique deleniti deserunt itaque.
-                </div> -->
+                <div class="payment_section">
+                    <div class="payment_details">
+                        <div class="note">Note</div>
+                        <div class="note_txt">Thanks for the business.</div>
+                        <div class="payment_info">
+                            <div class="details_title">Payment Details</div>
+                            <div class="details">
+                                <div class="paypal"> PAYPAL:<span>example@email.com</span> </div>
+                                <div class="upi"> UPI:<span>userid@okbank</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sender_details">
+                    <div class="logo">
+                        <img src="./assets/images/company_logo.svg" alt="Sender Logo">
+                        <div class="sender_web_adress">
+                            <span class="material-symbols-outlined">language</span>
+                            <div class="adress">www.websitename.com</div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <span class="material-symbols-outlined">mail</span>
+                        <div class="mail_adress">xyx@email.com</div>
+                    </div>
+                    <div class="phone">
+                        <span class="material-symbols-outlined">phone</span>
+                        <div class="mail_adress">646-888-6885</div>
+                    </div>
+                </div>
 
             </div>
         </div>
